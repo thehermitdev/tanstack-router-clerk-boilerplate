@@ -5,9 +5,10 @@ const envSchema = z.object({
     .string()
     .trim()
     .min(1)
-    .default("TanStack Router Boilerplate"),
+    .default("TanStack Router Clerk Boilerplate"),
   VITE_API_BASE_URL: z.url().default("https://dummyjson.com"),
   VITE_API_TIMEOUT_MS: z.coerce.number().int().positive().default(15_000),
+  VITE_CLERK_PUBLISHABLE_KEY: z.string().trim().min(1),
 });
 
 const result = envSchema.safeParse(import.meta.env);
