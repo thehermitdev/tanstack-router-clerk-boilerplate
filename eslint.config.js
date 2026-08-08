@@ -7,9 +7,6 @@ export default [
   {
     ignores: [
       "dist/**",
-      "coverage/**",
-      "playwright-report/**",
-      "test-results/**",
       "src/routeTree.gen.ts",
       "eslint.config.js",
       "prettier.config.js",
