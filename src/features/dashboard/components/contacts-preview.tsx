@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 
-import { Button } from "#/shared/components/ui/button";
+import { buttonVariants } from "#/shared/components/ui/button";
 import {
   Card,
   CardAction,
@@ -34,10 +34,13 @@ export function ContactsPreview({ contacts }: ContactsPreviewProps) {
           A live preview of contacts returned by DummyJSON.
         </CardDescription>
         <CardAction>
-          <Button variant="outline" size="sm" render={<Link to="/contacts" />}>
+          <Link
+            to="/contacts"
+            className={buttonVariants({ variant: "outline", size: "sm" })}
+          >
             View all
             <ArrowUpRight className="size-4" aria-hidden="true" />
-          </Button>
+          </Link>
         </CardAction>
       </CardHeader>
       <CardContent>
