@@ -7,3 +7,4 @@ dist/
 *.local
 .tanstack/
 src/routeTree.gen.ts
+bun.lock

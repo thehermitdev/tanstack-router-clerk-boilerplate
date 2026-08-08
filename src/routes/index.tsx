@@ -118,7 +118,7 @@ function WelcomePage() {
           <div className="relative">
             <div className="absolute -inset-8 rounded-[2.5rem] bg-primary/5 blur-3xl" />
             <div className="relative overflow-hidden rounded-3xl border bg-card/90 p-2 shadow-2xl shadow-foreground/5 backdrop-blur">
-              <div className="rounded-[1.25rem] border bg-background p-6 sm:p-8">
+              <div className="rounded-[0.75rem] border bg-background p-6 sm:p-8">
                 <div className="mb-8 flex items-center justify-between">
                   <div>
                     <p className="text-sm font-medium">Application foundation</p>
