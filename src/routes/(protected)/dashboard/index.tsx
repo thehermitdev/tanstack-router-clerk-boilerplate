@@ -16,9 +16,7 @@ export const Route = createFileRoute("/(protected)/dashboard/")({
     }
   },
   loader: ({ context }) =>
-    context.queryClient.ensureQueryData(
-      contactsListQueryOptions(dashboardContactsLimit),
-    ),
+    context.queryClient.ensureQueryData(contactsListQueryOptions(dashboardContactsLimit)),
   pendingComponent: () => (
     <div className="grid min-h-screen place-items-center bg-background">
       <p className="text-sm text-muted-foreground">Loading dashboard…</p>
@@ -42,9 +40,7 @@ export const Route = createFileRoute("/(protected)/dashboard/")({
 });
 
 function DashboardRoute() {
-  const { data } = useSuspenseQuery(
-    contactsListQueryOptions(dashboardContactsLimit),
-  );
+  const { data } = useSuspenseQuery(contactsListQueryOptions(dashboardContactsLimit));
 
   const contacts: DashboardContact[] = data.users.map((contact) => ({
     id: contact.id,
@@ -57,10 +53,6 @@ function DashboardRoute() {
   }));
 
   return (
-    <DashboardPage
-      contacts={contacts}
-      totalContacts={data.total}
-      userMenu={<AppUserMenu />}
-    />
+    <DashboardPage contacts={contacts} totalContacts={data.total} userMenu={<AppUserMenu />} />
   );
 }

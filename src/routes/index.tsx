@@ -47,9 +47,7 @@ function WelcomePage() {
               <LayoutDashboard className="size-4" aria-hidden="true" />
             </div>
             <div>
-              <p className="font-heading text-sm font-semibold tracking-tight">
-                TanStack + Clerk
-              </p>
+              <p className="font-heading text-sm font-semibold tracking-tight">TanStack + Clerk</p>
               <p className="text-xs text-muted-foreground">SPA Boilerplate</p>
             </div>
           </div>
@@ -86,9 +84,9 @@ function WelcomePage() {
             </h1>
 
             <p className="mt-7 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
-              A focused TanStack Router boilerplate with Clerk authentication,
-              TanStack Query server state, runtime validation, Tailwind CSS, and
-              shadcn/ui primitives already composed at the correct boundaries.
+              A focused TanStack Router boilerplate with Clerk authentication, TanStack Query server
+              state, runtime validation, Tailwind CSS, and shadcn/ui primitives already composed at
+              the correct boundaries.
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-3">

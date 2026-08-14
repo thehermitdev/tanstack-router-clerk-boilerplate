@@ -12,11 +12,7 @@ interface DashboardPageProps {
   userMenu: ReactNode;
 }
 
-export function DashboardPage({
-  contacts,
-  totalContacts,
-  userMenu,
-}: DashboardPageProps) {
+export function DashboardPage({ contacts, totalContacts, userMenu }: DashboardPageProps) {
   const roles = contacts.reduce(
     (accumulator, contact) => {
       accumulator[contact.role] += 1;
@@ -30,11 +26,10 @@ export function DashboardPage({
       <div className="flex flex-col gap-6">
         <div>
           <p className="text-sm font-medium text-muted-foreground">Dashboard</p>
-          <h1 className="mt-1 font-heading text-3xl font-semibold tracking-tight">
-            Overview
-          </h1>
+          <h1 className="mt-1 font-heading text-3xl font-semibold tracking-tight">Overview</h1>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground">
-            A compact adaptation of shadcn/ui dashboard-01 using the application&apos;s existing primitives and DummyJSON contacts.
+            A compact adaptation of shadcn/ui dashboard-01 using the application&apos;s existing
+            primitives and DummyJSON contacts.
           </p>
         </div>
 
@@ -45,11 +40,7 @@ export function DashboardPage({
         />
 
         <div className="grid gap-6 xl:grid-cols-[0.72fr_1.28fr]">
-          <RoleDistribution
-            admin={roles.admin}
-            moderator={roles.moderator}
-            user={roles.user}
-          />
+          <RoleDistribution admin={roles.admin} moderator={roles.moderator} user={roles.user} />
           <ContactsPreview contacts={contacts} />
         </div>
       </div>

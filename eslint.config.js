@@ -23,8 +23,7 @@ export default [
           paths: [
             {
               name: "axios",
-              message:
-                "Use the shared HTTP client instead of importing Axios directly.",
+              message: "Use the shared HTTP client instead of importing Axios directly.",
             },
           ],
         },
@@ -46,8 +45,7 @@ export default [
           patterns: [
             {
               group: ["#/app/**", "#/features/**", "#/routes/**"],
-              message:
-                "Shared code must not depend on app, routes, or feature implementation.",
+              message: "Shared code must not depend on app, routes, or feature implementation.",
             },
           ],
         },

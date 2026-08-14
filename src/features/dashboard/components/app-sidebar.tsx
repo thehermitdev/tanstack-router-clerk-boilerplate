@@ -35,8 +35,7 @@ export function AppSidebar() {
             activeOptions={{ exact: true }}
             className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
             activeProps={{
-              className:
-                "bg-muted text-foreground shadow-xs ring-1 ring-foreground/5",
+              className: "bg-muted text-foreground shadow-xs ring-1 ring-foreground/5",
             }}
           >
             <Icon className="size-4" aria-hidden="true" />

@@ -1,11 +1,7 @@
 import { z } from "zod";
 
 const envSchema = z.object({
-  VITE_APP_NAME: z
-    .string()
-    .trim()
-    .min(1)
-    .default("TanStack Router Clerk Boilerplate"),
+  VITE_APP_NAME: z.string().trim().min(1).default("TanStack Router Clerk Boilerplate"),
   VITE_API_BASE_URL: z.url().default("https://dummyjson.com"),
   VITE_API_TIMEOUT_MS: z.coerce.number().int().positive().default(15_000),
   VITE_CLERK_PUBLISHABLE_KEY: z.string().trim().min(1),
@@ -14,10 +10,10 @@ const envSchema = z.object({
 const result = envSchema.safeParse(import.meta.env);
 
 if (!result.success) {
-  console.error(
-    "Invalid environment configuration",
-    result.error.flatten().fieldErrors,
-  );
+  const { fieldErrors } = z.flattenError(result.error);
+  for (const [key, values] of Object.entries(fieldErrors)) {
+    console.error(`${key}: ${values}`);
+  }
   throw new Error("Invalid environment configuration");
 }
 

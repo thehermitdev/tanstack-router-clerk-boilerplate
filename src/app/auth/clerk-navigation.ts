@@ -14,10 +14,7 @@ function resolveLocalHref(to: string): string | null {
   return `${target.pathname}${target.search}${target.hash}`;
 }
 
-export function clerkRouterPush(
-  to: string,
-  metadata?: ClerkNavigationMetadata,
-) {
+export function clerkRouterPush(to: string, metadata?: ClerkNavigationMetadata) {
   const localHref = resolveLocalHref(to);
 
   if (localHref) {
@@ -33,10 +30,7 @@ export function clerkRouterPush(
   window.location.assign(to);
 }
 
-export function clerkRouterReplace(
-  to: string,
-  metadata?: ClerkNavigationMetadata,
-) {
+export function clerkRouterReplace(to: string, metadata?: ClerkNavigationMetadata) {
   const localHref = resolveLocalHref(to);
 
   if (localHref) {

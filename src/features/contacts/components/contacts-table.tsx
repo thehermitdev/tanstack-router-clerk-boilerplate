@@ -32,19 +32,13 @@ export function ContactsTable({ contacts }: ContactsTableProps) {
                       <p className="truncate font-medium">
                         {contact.firstName} {contact.lastName}
                       </p>
-                      <p className="truncate text-xs text-muted-foreground">
-                        {contact.email}
-                      </p>
+                      <p className="truncate text-xs text-muted-foreground">{contact.email}</p>
                     </div>
                   </div>
                 </td>
-                <td className="px-4 py-3 capitalize text-muted-foreground">
-                  {contact.role}
-                </td>
+                <td className="px-4 py-3 capitalize text-muted-foreground">{contact.role}</td>
                 <td className="px-4 py-3">
-                  <p className="max-w-56 truncate font-medium">
-                    {contact.company.name}
-                  </p>
+                  <p className="max-w-56 truncate font-medium">{contact.company.name}</p>
                   <p className="max-w-56 truncate text-xs text-muted-foreground">
                     {contact.company.title}
                   </p>

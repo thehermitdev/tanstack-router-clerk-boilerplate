@@ -30,14 +30,9 @@ export function ContactsPreview({ contacts }: ContactsPreviewProps) {
     <Card>
       <CardHeader>
         <CardTitle>Recent contacts</CardTitle>
-        <CardDescription>
-          A live preview of contacts returned by DummyJSON.
-        </CardDescription>
+        <CardDescription>A live preview of contacts returned by DummyJSON.</CardDescription>
         <CardAction>
-          <Link
-            to="/contacts"
-            className={buttonVariants({ variant: "outline", size: "sm" })}
-          >
+          <Link to="/contacts" className={buttonVariants({ variant: "outline", size: "sm" })}>
             View all
             <ArrowUpRight className="size-4" aria-hidden="true" />
           </Link>
@@ -67,9 +62,7 @@ export function ContactsPreview({ contacts }: ContactsPreviewProps) {
                         />
                         <div className="min-w-0">
                           <p className="truncate font-medium">{contact.name}</p>
-                          <p className="truncate text-xs text-muted-foreground">
-                            {contact.email}
-                          </p>
+                          <p className="truncate text-xs text-muted-foreground">{contact.email}</p>
                         </div>
                       </div>
                     </td>
@@ -79,9 +72,7 @@ export function ContactsPreview({ contacts }: ContactsPreviewProps) {
                         {contact.title}
                       </p>
                     </td>
-                    <td className="px-4 py-3 capitalize text-muted-foreground">
-                      {contact.role}
-                    </td>
+                    <td className="px-4 py-3 capitalize text-muted-foreground">{contact.role}</td>
                   </tr>
                 ))}
               </tbody>
